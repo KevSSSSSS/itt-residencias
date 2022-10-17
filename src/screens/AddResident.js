@@ -25,13 +25,19 @@ export default function AddResident() {
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Apellido paterno</Form.Label>
+              <Form.Label>Apellido P</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Apellido materno</Form.Label>
+              <Form.Label>Apellido M</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Grupo</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
@@ -43,17 +49,37 @@ export default function AddResident() {
           </Row>
           <Row>
             <Col>
-              <Form.Label>Número de control</Form.Label>
+              <Form.Label>Número de Control</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Semestre</Form.Label>
+              <Form.Label>Númereo de Semestre</Form.Label>
               <Form.Control type="text"></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Correo electronico</Form.Label>
+              <Form.Label>Correo Institucional</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Correo Electronico 2</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Correo Electronico 3</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            
+            <Row>
+            <Col>
+              <Form.Label>Correo Electronico 4</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
@@ -65,45 +91,13 @@ export default function AddResident() {
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Telefono de casa</Form.Label>
+              <Form.Label>Telefono de Casa</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
-          </Row>
-        </Form.Group>
-        <br></br>
-        <h5>Datos del asesor interno</h5>
-        <Form.Group>
-          <Row>
-            <Col>
-              <Form.Label>Nombre(s)</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Apellido paterno</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Apellido materno</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Correo electronico</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Telefono</Form.Label>
-              <Form.Control type="text"></Form.Control>
-            </Col>
+            
+            </Row>
           </Row>
         </Form.Group>
         <br></br>
@@ -117,19 +111,19 @@ export default function AddResident() {
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Apellido paterno</Form.Label>
+              <Form.Label>Apellido P</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Apellido materno</Form.Label>
+              <Form.Label>Apellido M</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Correo electronico</Form.Label>
+              <Form.Label>Correo</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
@@ -138,14 +132,70 @@ export default function AddResident() {
               <Form.Label>Telefono</Form.Label>
               <Form.Control type="text"></Form.Control>
             </Col>
+            <Row>
+            <Col>
+              <Form.Label>Telefono 2</Form.Label>
+              <Form.Control type="text"></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Correo Electronico 2</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            </Row>
           </Row>
+        </Form.Group>
+        <br></br>
+        <h5>Datos del asesor interno</h5>
+        <Form.Group>
+          <Row>
+            <Col>
+              <Form.Label>Nombre(s)</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Apellido P</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Apellido M</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Correo Electronico</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Label>Correo Electronico 2</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            </Row>
         </Form.Group>
         <br></br>
         <h5>Datos del proyecto</h5>
         <Form.Group>
           <Row>
             <Col>
-              <Form.Label>Nombre del proyecto</Form.Label>
+              <Form.Label>Nombre del Proyecto</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Número de Revisión</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
@@ -160,6 +210,38 @@ export default function AddResident() {
               <Form.Label>Periodo</Form.Label>
               <Form.Control type="text" ></Form.Control>
             </Col>
+            <Col>
+              <Form.Label>Fecha 1 de Revisión</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            </Row>
+            <Row>
+            <Col>
+              <Form.Label>Fecha 2 de Revisión</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Número de Oficio</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+          <Col>
+              <Form.Label>Inicio de Residencia</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Finalización de Residencia</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
           </Row>
         </Form.Group>
         <br></br>
@@ -169,8 +251,19 @@ export default function AddResident() {
             alert("Se registro un usuario");
           }}
         >
-          Registrar alumno
+          Registrar Alumno
         </Button>
+        
+        <Col>
+        <Button
+          variant="success"
+          onClick={() => {
+            
+          }}
+        >
+          Subir Archivos
+        </Button>
+        </Col>
       </Form>
     </Container>
   );
