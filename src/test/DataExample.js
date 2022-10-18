@@ -1,3 +1,17 @@
+export const semesters = ["9 Noveno", "10 Decimo", "11 Onceavo", "12 Doceavo", "13 Treceavo"];
+
+export const careers = [
+  "Mecatronica",
+  "Electromecanica",
+  "Electronica",
+  "Gestion empresarial",
+  "Industrial",
+  "Logistica",
+  "Quimica",
+  "Sistemas computacionales",
+  "TICS",
+];
+
 export const groups = [
   {
     mounth: "Enero",
