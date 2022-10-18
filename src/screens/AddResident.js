@@ -12,9 +12,9 @@ export default function AddResident() {
       <Link to={"/"}>
       <BsFillArrowLeftSquareFill size={36}/>
       </Link>
-      <h1>Agregar un residente</h1>
+      <h1>Agregar un Residente</h1>
       <br></br>
-      <h5>Datos del alumno</h5>
+      <h5>Datos del Alumno</h5>
       <Form>
         <Form.Group>
           <Row>
@@ -55,13 +55,14 @@ export default function AddResident() {
               ></Form.Control>
             </Col>
             <Col>
-              <Form.Label>Númereo de Semestre</Form.Label>
+              <Form.Label>Semestre</Form.Label>
               <Form.Control type="text"></Form.Control>
             </Col>
             <Col>
+            
               <Form.Label>Correo Institucional</Form.Label>
               <Form.Control
-                type="text"
+                 type="text" value="@toluca.tecnm.mx"
               ></Form.Control>
             </Col>
             <Col>
@@ -70,14 +71,13 @@ export default function AddResident() {
                 type="text"
               ></Form.Control>
             </Col>
+            <Row>
             <Col>
               <Form.Label>Correo Electronico 3</Form.Label>
               <Form.Control
                 type="text"
               ></Form.Control>
             </Col>
-            
-            <Row>
             <Col>
               <Form.Label>Correo Electronico 4</Form.Label>
               <Form.Control
@@ -101,53 +101,7 @@ export default function AddResident() {
           </Row>
         </Form.Group>
         <br></br>
-        <h5>Datos del asesor externo</h5>
-        <Form.Group>
-          <Row>
-            <Col>
-              <Form.Label>Nombre(s)</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Apellido P</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Apellido M</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Correo</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Telefono</Form.Label>
-              <Form.Control type="text"></Form.Control>
-            </Col>
-            <Row>
-            <Col>
-              <Form.Label>Telefono 2</Form.Label>
-              <Form.Control type="text"></Form.Control>
-            </Col>
-            <Col>
-              <Form.Label>Correo Electronico 2</Form.Label>
-              <Form.Control
-                type="text"
-              ></Form.Control>
-            </Col>
-            </Row>
-          </Row>
-        </Form.Group>
-        <br></br>
-        <h5>Datos del asesor interno</h5>
+        <h5>Datos del Asesor Externo</h5>
         <Form.Group>
           <Row>
             <Col>
@@ -174,6 +128,53 @@ export default function AddResident() {
                 type="text"
               ></Form.Control>
             </Col>
+            <Row>
+            <Col>
+              <Form.Label>Correo Electronico 2</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Telefono</Form.Label>
+              <Form.Control type="text"></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Telefono 2</Form.Label>
+              <Form.Control type="text"></Form.Control>
+            </Col>
+            
+            </Row>
+          </Row>
+        </Form.Group>
+        <br></br>
+        <h5>Datos del Asesor Interno</h5>
+        <Form.Group>
+          <Row>
+            <Col>
+              <Form.Label>Nombre(s)</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Apellido P</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Apellido M</Form.Label>
+              <Form.Control
+                type="text"
+              ></Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Correo Electronico</Form.Label>
+              <Form.Control
+                type="text" value="@toluca.tecnm.mx"
+              ></Form.Control>
+            </Col>
           </Row>
           <Row>
             <Col>
@@ -185,7 +186,7 @@ export default function AddResident() {
             </Row>
         </Form.Group>
         <br></br>
-        <h5>Datos del proyecto</h5>
+        <h5>Datos del Proyecto</h5>
         <Form.Group>
           <Row>
             <Col>
