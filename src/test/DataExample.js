@@ -1,4 +1,4 @@
-export const semesters = ["9 Noveno", "10 Decimo", "11 Onceavo", "12 Doceavo", "13 Treceavo"];
+export const semesters = ["8 Octavo","9 Noveno", "10 Decimo", "11 Onceavo", "12 Doceavo", "13 Treceavo"];
 
 export const careers = [
   "Mecatronica",
@@ -14,20 +14,22 @@ export const careers = [
 
 export const groups = [
   {
+    year: "2022",
     mounth: "Enero",
     groups: ["01", "02", "03"],
   },
   {
+    year: "2022",
     mounth: "Marzo",
     groups: ["04"],
   },
   {
-    name: "03",
+    year: "2022",
     mounth: "Abril",
     groups: ["05", "06", "07"],
   },
   {
-    name: "01",
+    year: "2022",
     mounth: "Mayo",
     groups: ["08", "09"],
   },

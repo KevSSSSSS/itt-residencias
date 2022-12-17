@@ -9,7 +9,7 @@ import {
   ButtonGroup,
   ToggleButton,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BsFillArrowLeftSquareFill,
   BsFillPersonPlusFill,
@@ -40,17 +40,19 @@ export default function AddResident() {
   const [radioValue, setRadioValue] = useState(1);
   const [approved, setApproved] = useState(null);
 
+  const location = useLocation();
+  const group = location.state.group;
+
   return (
     <Container style={{ marginTop: 10 }}>
-      <Link to={"/"}>
+      <Link to={"/groups"}>
         <BsFillArrowLeftSquareFill size={36} />
       </Link>
       {/*Datos del alumno*/}
       <h1>
         <BsFillPersonPlusFill size={45}></BsFillPersonPlusFill>
-        Agregar un residente
+        Agregar un residente al grupo {group}
       </h1>
-
       <br></br>
       <h5>Datos del alumno</h5>
       <Form>
@@ -142,12 +144,6 @@ export default function AddResident() {
                   </ToggleButton>
                 ))}
               </ButtonGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Form.Label>Domicilio</Form.Label>
-              <Form.Control type="text"></Form.Control>
             </Col>
           </Row>
           <Row>
@@ -343,6 +339,8 @@ export default function AddResident() {
           <Form.Control type="file" multiple></Form.Control>
         </Col>
         <br></br>
+        <Form.Label>Comentarios</Form.Label>
+        <Form.Control  as="textarea" rows={3}></Form.Control>
         {approved && (
           <>
             <h5>Datos del asesor interno</h5>

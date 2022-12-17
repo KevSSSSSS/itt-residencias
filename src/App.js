@@ -1,6 +1,7 @@
 import "./App.css";
 import NavMain from "./components/NavMain";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Residents from "./screens/Residents";
 import AddResident from "./screens/AddResident";

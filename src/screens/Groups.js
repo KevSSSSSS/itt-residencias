@@ -1,44 +1,88 @@
-import React from "react";
-import { Button, Container } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Container, Row, Col, Modal, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { groups } from "../test/DataExample";
-import {BsFillArrowLeftSquareFill} from "react-icons/bs";
+import { BsFillArrowLeftSquareFill, BsFillNodePlusFill } from "react-icons/bs";
 
 //Datos de ejemplo
 import { residents } from "../test/DataExample";
 
 export default function Groups() {
-  let newArray = [];
+  const [show, setShow] = useState(false);
+  const [newGroup, setNewGroup] = useState(0);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <Container style={{ marginTop: 10 }}>
-      <Link to={"/"}>
-        <BsFillArrowLeftSquareFill size={36}/>
-      </Link>
-      {groups.map((e) => {
-        return (
-          <>
-            <h3>{e.mounth}</h3>
-            {e.groups.map((i) => {
-              newArray = [];
-              residents.map((r)=>{
-                if (i == r.group) {
-                  newArray.push(r);
-                }
-              })
+    <>
+      <Container style={{ marginTop: 10 }}>
+        <Link to={"/"}>
+          <BsFillArrowLeftSquareFill size={36} />
+        </Link>
+        <h2>2022</h2>
+        <Container>
+          <Row>
+            {groups.map((e) => {
               return (
-                <Link to="/home" state={{ residents: newArray, group: i }}>
-                  <Button
-                    variant="outline-secondary"
-                    style={{ color: "#000", width: "100%", marginTop: 10 }}
+                <Col>
+                  <h4 style={{ margin: 10, width: "80%" }}>{e.mounth}</h4>
+                  {e.groups.map((i) => {
+                    return (
+                      <Col>
+                        <Link to={"/add"} state={{ group: i }}>
+                          <Button
+                            variant="primary"
+                            style={{ marginBottom: 8, width: "100%" }}
+                          >
+                            Grupo {i}
+                          </Button>
+                        </Link>
+                      </Col>
+                    );
+                  })}
+                  <div
+                    style={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                      display: "flex",
+                    }}
                   >
-                    Grupo {i}
-                  </Button>
-                </Link>
+                    <Button variant="outline-success" onClick={handleShow}>
+                      Agregar grupo{" "}
+                      <BsFillNodePlusFill size={24}></BsFillNodePlusFill>
+                    </Button>
+                  </div>
+                </Col>
               );
             })}
-          </>
-        );
-      })}
-    </Container>
+          </Row>
+        </Container>
+      </Container>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Numero del grupo</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Grupo 00"
+                autoFocus
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Agregar grupo
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }

@@ -15,7 +15,7 @@ export default function MainMenu() {
       </Row>
       <Row style={{ marginTop: 10 }} className="justify-content-md-center">
         <Col>
-          <Link to={"/add"}>
+          <Link to={"/groups"}>
             <Button
               variant="warning"
               style={{
